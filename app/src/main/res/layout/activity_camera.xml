@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#707070"
+    tools:context=".CameraActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlaySound"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPlaySound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#72612B"
+        android:drawableStart="@android:drawable/ic_media_play"
+        android:paddingStart="26dp"
+        android:paddingEnd="1dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnTafser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#72612B"
+        android:text="تفسير"
+        android:layout_marginEnd="24dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+          />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageQuran"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/alasr_surat"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlaySound" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNearly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#72612B"
+        android:text="المتشابهات"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
